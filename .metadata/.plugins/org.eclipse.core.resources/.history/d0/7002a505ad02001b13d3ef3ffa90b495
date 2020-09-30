@@ -1,0 +1,52 @@
+package br.com.senai.av1.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import br.com.senai.av1.model.Usuario;
+import br.com.senai.av1.repository.UsuarioRepository;
+
+@RestController
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioRepository repository;
+	
+	@GetMapping("usuario/list")
+	public ModelAndView findAll() {
+		
+		ModelAndView mv = new ModelAndView("/list");
+		mv.addObject("usuarios", repository.findAll());
+		
+		return mv;
+	}
+	
+	@GetMapping("usuario/add")
+	public ModelAndView add (Usuario usuario) {
+		
+		ModelAndView mv = new ModelAndView("/add");
+		mv.addObject("usuario", usuario);
+		
+		return mv;
+	}
+	
+	@GetMapping("usuario/view/{id}")
+	public ModelAndView findById() {
+		
+		ModelAndView mv = new ModelAndView("/view");
+		mv.addObject("usuario", repository.findById());
+		
+		return mv;
+	}
+	
+		
+	}
+
+}
