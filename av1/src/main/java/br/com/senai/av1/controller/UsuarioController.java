@@ -45,9 +45,9 @@ public class UsuarioController {
 	}
 	
 	@GetMapping("/edit/{id}")
-	public ModelAndView edit(@PathVariable("id") Long id) {
-		
-		return add(repository.findOne(id));
+	public String editUsuario(@PathVariable long id, Model model) {
+		model.addAttribute("funcionario", repository.findById(id));
+		return "usuario/edit";
 	}
 	
 	@GetMapping("/delete/{id}")
