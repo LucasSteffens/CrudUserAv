@@ -338,3 +338,4 @@
 2020-09-29 22:08:29,295 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-09-29 22:08:29,298 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-09-29 22:08:29,301 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-09-29 22:08:29,302 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\higor\Desktop\SENAI\Desenvolvimento de sistemas\Projeto-avaliacao-senai\av1\src\test\resources
